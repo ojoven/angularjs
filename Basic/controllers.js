@@ -24,3 +24,14 @@ app.controller('WatchController', ['$scope',
 
   }]
 );
+
+// List.html
+app.controller('ListController', ['$scope', function($scope) {
+
+  $scope.products = [
+    { name: 'Onion', price: '3' },
+    { name: 'Oil', price: '5' },
+    { name: 'Rice', price: '1' }
+  ];
+
+}]);

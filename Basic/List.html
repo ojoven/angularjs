@@ -1,0 +1,14 @@
+<html ng-app="app">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>
+    <script src="controllers.js"></script>
+</head>
+<body>
+<div ng-controller="ListController">
+    <div ng-repeat="product in products">
+        <span ng-bind="product.name"></span>
+        <span ng-bind="product.price | currency"></span>
+    </div>
+</div>
+</body>
+</html>
