@@ -6,9 +6,11 @@
 <body>
 <div ng-controller="ListController">
     <div ng-repeat="product in products">
+        <span ng-bind="$index + 1"></span>
         <span ng-bind="product.name"></span>
         <span ng-bind="product.price | currency"></span>
     </div>
+    Total elements: <span ng-bind="products.length"></span><br>
 </div>
 </body>
 </html>
