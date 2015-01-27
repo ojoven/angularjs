@@ -1,0 +1,16 @@
+<html ng-app="app">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>
+    <script src="controllers.js"></script>
+</head>
+<body>
+<div ng-controller="ListController">
+    <div ng-repeat="product in products" ng-class="{active: $index==selectedRow}">
+        <span ng-bind="$index + 1"></span>
+        <span ng-bind="product.name"></span>
+        <span ng-bind="product.price | currency"></span>
+    </div>
+    Total elements: <span ng-bind="products.length"></span><br>
+</div>
+</body>
+</html>

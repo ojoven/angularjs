@@ -25,7 +25,7 @@ app.controller('WatchController', ['$scope',
   }]
 );
 
-// List.html
+// List.html (and Class.html)
 app.controller('ListController', ['$scope', function($scope) {
 
   $scope.products = [
