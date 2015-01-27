@@ -1,0 +1,24 @@
+<html ng-app="app">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>
+    <script src="controllers.js"></script>
+</head>
+<body>
+<div ng-controller="ShowHideController">
+    <div ng-show="showMen">
+        <div ng-repeat="person in men">
+            <span ng-bind="person.name"></span>
+        </div>
+    </div>
+    <div ng-show="showWomen">
+        <div ng-repeat="person in women">
+            <span ng-bind="person.name"></span>
+        </div>
+    </div>
+    <div>
+        <a href="#" ng-show="showMen" ng-click="showWomenFunction($event)">Show Women</a>
+        <a href="#" ng-show="showWomen" ng-click="showMenFunction($event)">Show Men</a>
+    </div>
+</div>
+</body>
+</html>

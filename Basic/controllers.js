@@ -35,3 +35,24 @@ app.controller('ListController', ['$scope', function($scope) {
   ];
 
 }]);
+
+// ShowHide.html
+app.controller('ShowHideController', ['$scope', function($scope) {
+
+  $scope.men = [{ name: 'Anthony' }, { name: 'Mark' }, { name: 'Emil' }];
+  $scope.women = [{ name: 'Daniela' }, { name: 'Miren' }, { name: 'Ane' }];
+
+  $scope.showMen = false;
+  $scope.showWomen = true;
+
+  $scope.showWomenFunction = function() {
+    $scope.showWomen = true;
+    $scope.showMen = false;
+  }
+
+  $scope.showMenFunction = function() {
+    $scope.showWomen = false;
+    $scope.showMen = true;
+  }
+
+}]);
